@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
 
-                //Checking if the item is in checked state or not, if not make it in checked state
-                if(menuItem.isChecked()) menuItem.setChecked(false);
-                else menuItem.setChecked(true);
+                //We want the item clicked to always be checked, if it has been clicked; till some item else has been selected.
+                //This will work since group has been made single checkable in xml
+                 menuItem.setChecked(true);
 
                 //Closing drawer on item click
                 drawerLayout.closeDrawers();
